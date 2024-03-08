@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namora comigo?</title>
+</head>
+
+<body>
+    <div id="conteudo">
+        <h2>Aceita namorar comigo?</h2>
+        <div>
+            <button class="btn" onclick="sim()">Sim</button>
+            <button class="btnn" onclick="desvia(this)" onmouseover="desvia(this)">Não</button>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f122f1;
+        font-family: sans-serif;
+    }
+
+    #conteudo {
+        background: #f122f1;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    h2 {
+        color: white;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .btn, .btnn {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        color: white;
+    }
+
+    .btn {
+        background-color: green;
+    }
+
+    .btnn {
+        background-color: red;
+    }
+</style>
+
+<script>
+    function sim() {
+        alert("Você aceitou namorar comigo! :)");
+        location.href = "https://music.youtube.com/watch?v=izGwDsrQ1eQ";
+    }
+
+    function desvia(btn) {
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+</script>
+</html>
